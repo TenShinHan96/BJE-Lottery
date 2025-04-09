@@ -1,0 +1,91 @@
+/* Estilo general del body */
+body {
+  background-image: url('/img/fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  color: white;
+}
+
+/* Fondo para pantallas grandes */
+@media (min-width: 1200px) {
+  body {
+    background-image: url('/img/black-painted-wall-textured-background.jpg');
+  }
+}
+
+/* Contenedor principal */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Navbar fijo */
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo */
+.logo-container {
+  margin-top: 80px; /* Ajusta el espacio para el navbar fijo */
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+/* Texto promocional */
+.promo-text p {
+  font-size: 1.5em;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+/* Imagen del auto */
+.car-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Botón de compra */
+.buy-button button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.buy-button button:hover {
+  background-color: #0056b3;
+}
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+  .logo-container {
+    margin-top: 60px;
+    margin-bottom: 15px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .promo-text p {
+    font-size: 1.2em;
+  }
+
+  .buy-button button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+}

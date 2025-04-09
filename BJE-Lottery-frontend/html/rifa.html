@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rifa</title>
+    
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../CSS/rifa.css" />
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    
+    <!-- Script personalizado -->
+    <script src="../js/rifa.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../img/Logo.svg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top" />
+          BJE Lottery
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Números</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5 pt-5">
+      <!-- Logo -->
+      <div class="logo-container text-center mb-4">
+        <img src="../img/Logo.svg" alt="Logo" class="logo" />
+      </div>
+    
+      <!-- Caja con números -->
+      <div class="rifa-container bg-dark text-white p-4 rounded shadow">
+        <h1 class="text-center">Seleccione el número de la suerte</h1>
+    
+        <!-- Ejemplo de una tarjeta de rifa -->
+        <div class="card text-dark mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Rifa #123: Televisor 50"</h5>
+            <p class="card-text">¡Participá por un TV de 50"! Solo $5 por número.</p>
+            <button class="btn btn-success btn-participar" data-rifa-id="123">Participar</button>
+          </div>
+        </div>
+    
+        <!-- Aquí se renderizan los números disponibles -->
+        <div id="numerosDisponibles" class="grid-container mt-4 d-flex flex-wrap justify-content-center gap-2"></div>
+      </div>
+    
+      <!-- Alerta de confirmación o error -->
+      <div id="alert-container" class="mt-3"></div>
+    </div>
+    
+    <!-- Modal de confirmación -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmationModalLabel">Confirmación de número</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Aquí se mostrará el número seleccionado -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

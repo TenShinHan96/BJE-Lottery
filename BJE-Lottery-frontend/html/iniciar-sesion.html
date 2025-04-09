@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BJE Lottery - Iniciar Sesión</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="/CSS/style.css" />
+  </head>
+  <body>
+    <div class="container mt-5 pt-5">
+      <div class="logo-container text-center mb-4">
+        <img src="/img/Logo.svg" alt="BJE Logo" class="logo" />
+      </div>
+      <h2 class="text-center mb-4">Inicia Sesión</h2>
+      
+      <!-- FORMULARIO -->
+      <form id="formLogin" class="w-50 mx-auto">
+        <div class="mb-3 input-group">
+          <span class="input-group-text"><i class="fas fa-user"></i></span>
+          <input type="email" class="form-control" id="email" placeholder="Correo Electrónico" required />
+        </div>
+
+        <div class="mb-3 input-group">
+          <span class="input-group-text"><i class="fas fa-lock"></i></span>
+          <input type="password" class="form-control" id="password" placeholder="Contraseña" required />
+        </div>
+
+        <!-- ALERTA -->
+        <div id="alerta" class="mb-3"></div>
+
+        <!-- BOTÓN SUBMIT -->
+        <button type="submit" class="btn btn-primary w-100 mb-3">Continuar</button>
+
+        <div class="text-center">
+          <a href="/html/registro.html" class="d-block text-primary">Crear Cuenta Nueva</a>
+          <a href="#" class="d-block text-primary" data-bs-toggle="modal" data-bs-target="#recoverPasswordModal">Recuperar Contraseña</a>
+        </div>
+
+        <!-- OPCIONAL: Gmail -->
+        <!-- 
+        <a href="#" class="btn btn-secondary w-100 mt-3">
+          <i class="fas fa-envelope"></i> Inicia Sesión Con Gmail
+        </a> 
+        -->
+      </form>
+    </div>
+
+    <!-- MODAL: Recuperar contraseña -->
+    <div class="modal fade" id="recoverPasswordModal" tabindex="-1" aria-labelledby="recoverPasswordModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recoverPasswordModalLabel">Recuperar Contraseña</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="recoverPasswordForm">
+              <div class="mb-3">
+                <label for="recoverEmail" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="recoverEmail" placeholder="Ingresa tu correo electrónico" required />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script de inicio de sesión -->
+    <script src="/js/login.js" defer></script>
+  </body>
+</html>

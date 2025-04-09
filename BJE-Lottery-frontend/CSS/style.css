@@ -1,0 +1,331 @@
+/* Estilo general del body */
+body {
+    background-image: url('/img/fondo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    color: white;
+    height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
+  
+  /* Fondo para pantallas grandes */
+  @media (min-width: 1200px) {
+    body {
+      background-image: url('/img/black-painted-wall-textured-background.jpg');
+    }
+  }
+  
+  /* Contenedor principal */
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Navbar fijo */
+  .navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilo para el título principal */
+  h1 {
+    color: #ffcc00; /* Color amarillo para destacar */
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Espacio superior */
+    font-size: 3em; /* Tamaño de fuente grande */
+    text-shadow: 2px 2px 5px black; /* Sombra para mejor visibilidad */
+  }
+  
+  /* Estilo para el contenedor del logo */
+  .logo-container {
+    margin-top: 80px; /* Ajusta el espacio para el navbar fijo */
+    margin-bottom: 20px;
+    text-align: center; /* Centra el logo horizontalmente */
+  }
+  
+  /* Estilo para la imagen del logo */
+  .logo {
+    width: 150px; /* Tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+  }
+  
+  /* Estilo para el subtítulo */
+  h2 {
+    color: #ffffff; /* Color blanco */
+    text-align: center; /* Centra el texto */
+    margin-top: 10px; /* Espacio superior */
+    font-size: 2.5em; /* Tamaño de fuente */
+    text-shadow: 1px 1px 3px rgb(255, 255, 255); /* Sombra del texto */
+  }
+  
+  /* Ajustes para el formulario */
+  form {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para contraste */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+  }
+  
+  /* Ajustes para centrar el botón */
+  button {
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Ajustes para centrar el botón "Continuar" */
+  button.btn-primary {
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    display: block; /* Hace que el botón sea un bloque */
+    margin: 20px auto; /* Centra el botón horizontalmente y agrega margen superior e inferior */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
+  }
+  
+  /* Efecto hover para el botón */
+  button.btn-primary:hover {
+    background-color: #0056b3; /* Cambia a un azul más oscuro al pasar el mouse */
+  }
+  
+  /* Estilo para los enlaces */
+  a {
+    font-size: 0.9em; /* Tamaño de fuente */
+    text-decoration: none; /* Sin subrayado */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+  }
+  
+  /* Estilo para las casillas de verificación */
+  input[type="checkbox"] {
+    margin-right: 10px; /* Espaciado entre la casilla y el texto */
+    transform: scale(1.2); /* Aumenta el tamaño de la casilla */
+  }
+  
+  fieldset {
+    margin: 20px 0; /* Espaciado superior e inferior */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  legend {
+    color: white; /* Color del texto */
+    font-size: 1.2em; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Espaciado inferior */
+  }
+  
+  /* Estilo para el contenedor del formulario */
+  
+  /* Contenedor del formulario */
+  .form-container {
+    width: 100%; /* Ocupa todo el ancho */
+    max-width: 500px; /* Ancho máximo */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+    text-align: center;
+  }
+  
+  /* Título y subtítulo */
+  .form-container h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .form-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ccc;
+  }
+  
+  /* Estilo de los inputs */
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1em;
+  }
+  
+  /* Estilo para los placeholders */
+  form input::placeholder {
+    color: white; /* Cambia el color del texto del placeholder a blanco */
+    opacity: 0.8; /* Hace que el texto sea un poco translúcido */
+  }
+  
+  form input::placeholder {
+    color: #ccc;
+  }
+  
+  /* Contenedor de la fecha de nacimiento */
+  .birthdate-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .birthdate-container select {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1em;
+  }
+  
+  /* Botón de registro */
+  form .btn-primary {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo para el label de "Fecha de nacimiento" */
+  form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 1em;
+    margin-left: 5px;
+  }
+  
+  /* Estilo para los íconos dentro de los campos de entrada */
+  .input-group-text {
+    background-color: transparent !important; /* Fondo transparente */
+    border: none !important; /* Sin bordes */
+    color: white !important; /* Color del ícono */
+    font-size: 1.2em; /* Tamaño del ícono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px; /* Espaciado interno */
+  }
+  
+  /* Estilo para el ícono del ojo dentro del campo de contraseña */
+  .eye-icon {
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    color: white; /* Color del ícono */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+    font-size: 1.2em; /* Tamaño del ícono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px; /* Espaciado interno */
+  }
+  
+  /* Ajuste para el campo de entrada de contraseña */
+  .input-group .form-control {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: none; /* Sin sombra */
+  }
+  
+  /* Estilo para el contenedor de la contraseña */
+  .div.mb-3.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .div.mb-3.input-group .input-group-text {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  
+  .div.mb-3.input-group .form-control {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: none;
+  }
+  
+  .div.mb-3.input-group .eye-icon {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  
+  /* Media query para pantallas móviles */
+  @media (max-width: 768px) {
+    .logo-container {
+      margin-top: 60px;
+      margin-bottom: 15px;
+    }
+  
+    .logo {
+      width: 100px;
+    }
+  
+    form {
+      padding: 15px;
+      font-size: 0.9em;
+    }
+  
+    button {
+      font-size: 0.9em;
+      padding: 8px 16px;
+    }
+  }

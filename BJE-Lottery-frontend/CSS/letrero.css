@@ -1,0 +1,257 @@
+/* Estilo general del body */
+body {
+  background-image: url('/img/fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  color: white;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Cambia a columna para alinear elementos verticalmente */
+  align-items: center;
+}
+
+/* Fondo para pantallas grandes */
+@media (min-width: 1200px) {
+  body {
+    background-image: url('/img/black-painted-wall-textured-background.jpg');
+  }
+}
+
+/* Contenedor del encabezado */
+.header {
+  text-align: center;
+  margin-top: 20px; /* Espaciado superior */
+}
+
+/* Contenedor principal */
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Navbar fijo */
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para el contenedor del logo */
+.logo-container {
+  margin-top: 80px; /* Ajusta el espacio para el navbar fijo */
+  margin-bottom: 20px;
+  text-align: center; /* Centra el logo horizontalmente */
+}
+
+/* Estilo para el logo */
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+/* Contenedor del formulario */
+.letrero-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.letrero-container h1 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.letrero-container p {
+  font-size: 1em;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Estilo para el título principal fuera del contenedor */
+.page-title {
+  font-size: 2.5em;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px black;
+  margin-bottom: 20px; /* Espaciado inferior */
+  text-shadow: 1px 1px 3px rgb(255, 255, 255); /* Sombra del texto */
+}
+
+/* Estilo para el título principal */
+h1 {
+  margin-bottom: 20px; /* Espaciado inferior */
+  font-size: 24px; /* Tamaño de fuente */
+}
+
+/* Estilo para el subtítulo */
+h2 {
+  color: #ffffff; /* Color del texto */
+  text-align: center; /* Centra el texto */
+  margin-top: 10px; /* Espaciado superior */
+  font-size: 2.5em; /* Tamaño de fuente */
+  text-shadow: 1px 1px 3px rgb(255, 255, 255); /* Sombra del texto */
+}
+
+/* Estilo para el formulario */
+.form {
+  display: flex; /* Usa flexbox para organizar los elementos */
+  flex-direction: column; /* Coloca los elementos en una columna */
+  gap: 15px; /* Espaciado entre los elementos */
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgb(255, 255, 255);
+}
+
+/* Estilo para los campos de texto */
+input[type="text"],
+input[type="email"] {
+  width: 95%; /* Ocupa todo el ancho disponible */
+  padding: 15px; /* Espaciado interno */
+  margin-bottom: 15px; /* Espaciado inferior */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Fondo semitransparente blanco */
+  color: white; /* Color del texto */
+  font-size: 1em; /* Tamaño de fuente */
+}
+
+/* Estilo para los textos de marcador de posición */
+input::placeholder {
+  color: #ccc; /* Color del texto del marcador */
+}
+
+/* Estilo para las casillas de verificación */
+input[type="checkbox"] {
+  margin-right: 10px; /* Espaciado a la derecha */
+  transform: scale(1.2); /* Aumenta el tamaño de la casilla */
+}
+
+/* Contenedor de términos y condiciones */
+.terms {
+  display: flex;
+  gap: 5px;
+  font-size: 12px;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.terms label {
+  margin-top: 5px; /* Ajusta el margen superior para alinear el texto con el checkbox */
+}
+
+/* Botón de envío */
+button {
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para las etiquetas */
+label {
+  text-align: left; /* Alinea el texto a la izquierda */
+  display: block; /* Muestra la etiqueta como bloque */
+  margin-bottom: 5px; /* Espaciado inferior */
+  color: white; /* Color del texto */
+  font-size: 1em; /* Tamaño de fuente */
+  margin-left: 5px; /* Espaciado a la izquierda */
+}
+
+/* Estilo para los enlaces */
+a {
+  font-size: 0.9em; /* Tamaño de fuente */
+  text-decoration: none; /* Sin subrayado */
+  color: #007bff; /* Color azul */
+}
+
+/* Estilo para los enlaces al pasar el cursor */
+a:hover {
+  text-decoration: underline; /* Subraya el texto al pasar el cursor */
+}
+
+/* Media query para vista de dispositivos móviles */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+
+  .logo-container {
+    margin-top: 60px;
+    margin-bottom: 15px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .letrero-container {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+/* Media query para vista de computadora */
+@media (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1,
+  h2 {
+    font-size: 2.5em;
+  }
+
+  .container {
+    width: 60%;
+    padding: 30px;
+  }
+
+  button {
+    font-size: 1.2em;
+    padding: 12px 24px;
+  }
+}

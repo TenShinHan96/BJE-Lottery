@@ -1,0 +1,403 @@
+/* Estilo general del body */
+body {
+  background-image: url('/img/fondo.png'); /* Imagen de fondo predeterminada */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  color: white;
+}
+
+/* Fondo para pantallas grandes */
+@media (min-width: 1200px) {
+  body {
+    background-image: url('/img/black-painted-wall-textured-background.jpg');
+  }
+}
+
+/* Contenedor principal */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Navbar fijo */
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo */
+.logo-container {
+  margin-top: 80px; /* Ajusta el espacio para el navbar fijo */
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+/* Contenedor de la rifa */
+.rifa-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.rifa-container h1 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+/* Título principal */
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Contenedor de la cuadrícula */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  width: 90%; /* Ancho de la cuadrícula */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid-container div {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.grid-container div:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para cada número */
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.grid-item input[type="checkbox"] {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #ffcc00; /* Borde amarillo */
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.grid-item input[type="checkbox"]:checked {
+  background-color: #ffcc00; /* Fondo amarillo al seleccionar */
+  border-color: #ffcc00;
+}
+
+.grid-item label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+  color: white;
+  pointer-events: none;
+}
+
+/* Botón de confirmación */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para enlaces con clase btn */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Botón de envío */
+.button-container .btn {
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.button-container .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Botón de flecha */
+.button-container .btn-secondary {
+  font-size: 1.2em;
+  padding: 10px 15px;
+  border-radius: 50%;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.button-container .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Media query para vista de dispositivos móviles */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+    gap: 10px;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .logo-container {
+    margin-top: 60px;
+    margin-bottom: 15px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .rifa-container {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+
+  .grid-container div {
+    padding: 8px;
+    font-size: 0.8em;
+  }
+
+  .button-container .btn {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+/* Media query para vista de computadora */
+@media (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* Cambia a 4 columnas */
+    gap: 20px;
+  }
+
+  button {
+    font-size: 1.2em;
+    padding: 12px 24px;
+  }
+}
+
+/* Ajustes generales para pantallas móviles */
+@media (max-width: 768px) {
+  /* Ajustar el espaciado del contenedor principal */
+  .container {
+    padding: 10px;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-brand img {
+    width: 25px; /* Reducir el tamaño del logo */
+    height: 25px;
+  }
+
+  /* Logo */
+  .logo-container {
+    margin-top: 60px; /* Reducir el margen superior */
+    margin-bottom: 15px;
+  }
+
+  .logo {
+    width: 100px; /* Reducir el tamaño del logo */
+  }
+
+  /* Contenedores principales */
+  .about-container,
+  .contact-container,
+  .rifa-container {
+    padding: 15px; /* Reducir el espaciado interno */
+    font-size: 0.9em; /* Reducir el tamaño de fuente */
+  }
+
+  /* Títulos */
+  h1, h2 {
+    font-size: 1.5em; /* Reducir el tamaño de los títulos */
+  }
+
+  /* Botones */
+  button, .btn {
+    font-size: 0.9em; /* Reducir el tamaño del texto en botones */
+    padding: 8px 16px; /* Reducir el espaciado interno */
+  }
+
+  /* Cuadrícula de números en rifa */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas */
+    gap: 10px;
+  }
+
+  .grid-container div {
+    padding: 8px; /* Reducir el espaciado interno */
+    font-size: 0.8em; /* Reducir el tamaño del texto */
+  }
+}
+
+/* Estilo para el fondo del modal */
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro semitransparente */
+  color: white; /* Texto blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+  border: 2px solid #ffcc00; /* Borde amarillo */
+}
+
+/* Título del modal */
+.modal-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 5px black; /* Sombra de texto */
+}
+
+/* Botones del modal */
+.modal-footer .btn {
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn-primary {
+  background-color: #007bff; /* Azul principal */
+  border: none;
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+}
+
+.modal-footer .btn-secondary {
+  background-color: #6c757d; /* Gris */
+  border: none;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #5a6268; /* Gris más oscuro */
+}
+
+/* Botón de cierre del modal */
+.modal-header .btn-close {
+  background-color: #ffcc00; /* Amarillo */
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  opacity: 1;
+}
+
+.modal-header .btn-close:hover {
+  background-color: #e6b800; /* Amarillo más oscuro */
+}
+
+/* Texto del cuerpo del modal */
+.modal-body {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 10px;
+  }
+
+  .modal-title {
+    font-size: 1.2em;
+  }
+
+  .modal-body {
+    font-size: 1em;
+  }
+
+  .modal-footer .btn {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
